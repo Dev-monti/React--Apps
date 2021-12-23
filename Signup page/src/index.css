@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+:root{
+  --blue: #0e0041b0;
+  --red: #fc4b53;
+  --blueLight : #d2d9eb;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+}
+img{
+  width: 100%;
+}
+button,
+input{
+  background: none;
+  border: 0;
+  outline: 0;
+}
+input:focus{
+  border: 2px solid var(--blue);
+  border-radius: 7px;
+}
+.body{
+  padding: 30px 50px;
+  height: 100vh;
+  justify-content: center;
+}
+
+
+h2{
+  font-size: 45px;
+  font-weight: 700;
+  color: #0e0046;
+}
+p.signwith-p{
+  color: var(--red);
+  font-weight: 500;
+  padding-left: 70px;
+  margin: 30px 0;
+  position: relative;
+}
+p.signwith-p::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 50px;
+  transform: translateY(-50%);
+  background-color: var(--red);
+}
+.signup-with button{
+  width: 100%;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 11px 0px 11px 44px;
+  border: 1px solid var(--blueLight);
+  border-radius: 7px;
+  text-align: left;
+  color: var(--blue);
+  transition: .5s;
+}
+.signup-with button:hover{
+  background: #e8efff46;
+  transition: .5;
+}
+@media (max-width: 1200px){
+  .signup-with button{
+    margin-bottom: 10px;
+  }
+  .body{
+    height: auto; 
+  }
+}
+.signup-with button::after{
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  left: 10px;
+  background-size: cover;
+}
+.signup-with button.google::after{
+  background-image: url('images/googleLogo.jpeg');
+}
+.signup-with button.facebook::after{
+  background-image: url('images/logo-facebook.png');
+}
+form{
+  margin-top: 30px !important;
+}
+form label{
+  display: block;
+  font-size: 14px;
+  color: var(--blue);
+  margin-bottom: 5px;
+}
+form input{
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 10px 5px;
+  background: #e8efff46;
+  border: 1px solid var(--blueLight);
+  border-radius: 7px;
+}
+form input.empty{
+  border: 1px solid var(--red);
+  animation: animi .5s linear;
+}
+form .chackbox.empty label{
+  color: var(--red);
+}
+form .chackbox.empty{
+  animation: animi .5s linear;
+}
+@keyframes animi{
+  0%{
+    transform: translateX(10px);
+  }
+  30%{
+    transform: translateX(-10px);
+  }
+  50%{
+    transform: translateX(10px);
+  }
+  70%{
+    transform: translateX(-10px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+form .chackbox{
+  display: flex;
+  margin-bottom: 30px;
+}
+form .chackbox label{
+  margin: 0;
+  cursor: pointer;
+}
+input[type=checkbox]{
+  width: 20px;
+  height: 20px;
+  margin: 0 15px 0 0;
+  cursor: pointer;
+}
+.form-footer{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.form-footer p{
+  margin: 0 15px 0 0;
+  color: var(--blue);
+}
+.form-footer button{
+  color: var(--red);
+}
+form button{
+  background-color: var(--red);
+  padding: 0px 7px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+form button i{
+  font-size: 25px;
+  color: #fff;
+}
+.imgpage{
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+@media (max-width: 992px){
+  .imgpage{
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

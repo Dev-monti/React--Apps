@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
+.hero{
+  --textColor: hsl(200, 15%, 8%);
+  --inputColor: hsl(0, 0%, 52%);
+  --backgoundColor: hsl(0, 0%, 98%);
+  --elementsColor: hsl(0, 0%, 100%);
+  --shadowColor: #00000021;
+
+  background-color: hsl(0, 0%, 98%);
+  min-height: 100vh;
+}
+.hero.dark{
+  --textColor: hsl(0, 0%, 100%);
+  --inputColor: hsl(0, 0%, 52%);
+  --backgoundColor: hsl(207, 26%, 17%);
+  --elementsColor: hsl(209, 23%, 22%);
+
+  background-color: hsl(207, 26%, 17%);
+}
+h2,
+h3,
+h4{
+  color: var(--textColor);
+}
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+li{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+button,
+input{
+  border: 0;
+  background: none;
+  outline: 0;
+}
+img{
+  width: 100%;
+}
+body{
+  font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+header{
+  padding: 15px;
+  background-color: var(--elementsColor);
+  box-shadow: 0 0 10px var(--shadowColor);
+}
+header h2{
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+.btn-dark-mode span{
+  font-size: .8rem;
+  font-weight: 800;
+  margin-left: 10px;
+  color: var(--textColor);
+}
+.btn-dark-mode i{
+  color: var(--textColor);
+}
+.filtering{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.filtering > div{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.filtering > div > div{
+  display: flex;
+  align-items: center;
+  height: 45px;
+  margin: 10px 0;
+  padding: 0 20px;
+  background-color: var(--elementsColor);
+  border-radius: 7px;
+  box-shadow: 0 0 10px var(--shadowColor);
+}
+.search i{
+  margin-right: 10px;
+  color: hsl(0, 0%, 52%);
+}
+.search input{
+  width: 300px;
+  font-size: .7rem;
+  color: var(--inputColor);
+}
+.search input:focus{
+  font-size: 1rem;
+  font-weight: 600;
+}
+.filter{
+  position: relative;
+  justify-content: space-between;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--textColor);
+  margin-bottom: 5px;
+  background-color: var(--elementsColor);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.filter ul{
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  background: var(--elementsColor);
+  border-radius: 7px;
+  padding: 7px 0;
+  box-shadow: 0 0 10px var(--shadowColor);
+}
+.filter ul li{
+  padding: 7px 15px;
+  cursor: pointer;
+}
+.filter ul li:hover{
+  background-color: var(--backgoundColor);
+  transition: .5s;
+}
+.Countries > div{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.country{
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px var(--shadowColor);
+  cursor: pointer;
+}
+.country img{
+  height: 160px;
+  border-radius: 5px 5px 0 0;
+}
+@media (max-width: 767.98px){
+  .country img{
+    height: 270px;
+  }
+}
+.country-info{
+  padding: 20px 20px;
+  background-color: var(--elementsColor);
+  border-radius: 5px;
+}
+.country-info h3{
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.country-info ul li{
+  font-size: .8rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--textColor);
+}
+.country-info ul li span,
+.cntr-county ul li span{
+  font-weight: 300;
+}
+.spinner-grow{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4rem;
+  height: 4rem;
+  background-color: #383838;
+  animation: 1.2s linear infinite spinner-grow;
+}
+.cntr-county button:nth-child(1){
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 50px 0;
+  padding: 7px 25px;
+  box-shadow: 0 0 10px var(--shadowColor);
+  color: var(--textColor);
+  background-color: var(--elementsColor);
+}
+.cntr-county button:nth-child(1) i{
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+.cntr-county h3{
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.info-cntr ul li{
+  margin: 10px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--textColor);
+}
+.info-cntr ul li span{
+  font-size: .8rem;
+}
+.info-cntr h4{
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 25px;
+}
+.info-cntr button{
+  margin: 0 10px;
+  padding: 5px 15px;
+  color: var(--textColor);
+  background-color: var(--elementsColor);
+  box-shadow: 0 0 5px var(--shadowColor);
+  border-radius: 5px;
+}
+@media (max-width: 992px){
+  .cntr-county div > div{
+    margin: auto;
+  }
+  .cntr-county div > div:nth-child(2){
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .info-cntr div > div{
+    padding-left: 0;
+  }
+}
+
+
+
+
+
+
+

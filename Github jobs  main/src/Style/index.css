@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;500;700&display=swap');
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+h2,
+h3,
+h4,
+h5,
+p
+{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+button{
+  border: 0;
+  outline: 0;
+}
+.hero,
+body{
+  --backgroundItem: #fff;
+  --backgroundCheck: rgb(244, 246, 248); 
+  --inputColor: #000;
+  --textColor: rgb(25, 32, 45);
+
+  background-color: rgb(244, 246, 248);
+  min-height: 101vh;
+}
+.hero.dark{
+  --backgroundItem: rgb(25, 32, 45);
+  --backgroundCheck: rgb(18, 23, 33); 
+  --inputColor: rgb(197, 197, 197);
+  --textColor: #fff;
+
+  background-color: rgb(18, 23, 33);
+}
+.container{
+  padding: 0 10px;
+}
+header .container,
+.dark-mode,
+.input-filter,
+.cmpny-logo,
+.header-dt-jb,
+.company-logo,
+.hd-ds-jb
+{
+  display: flex;
+  align-items: center;
+}
+header{
+  height: 120px;
+  padding-top: 30px;
+  background-image: url('../assets/desktop/bg-pattern-header.svg');
+  background-position-y: bottom;
+}
+header .container{
+  justify-content: space-between;
+}
+header h2{
+  color: #fff;
+}
+.dark-mode{
+  justify-content: space-between;
+}
+.btn-light-dark{
+  position: relative;
+  width: 54px;
+  height: 22px;
+  margin: 0 10px;
+  background-color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.btn-light-dark span{
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 14px;
+  height: 14px;
+  background-color: rgb(89, 100, 224);
+  border-radius: 50%;
+  transition: .7s;
+}
+.btn-light-dark span.dark{
+  right: 34px;
+}
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000080;
+  cursor: pointer;
+  z-index: 99;
+}
+.filtering{
+  position: relative;
+}
+.form-filter{
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: var(--backgroundItem);
+  border-radius: 7px;
+  z-index: 999;
+}
+.input-filter{
+  padding: 20px;
+  border-right: 1px solid #00000038;
+}
+.iconFilter{
+  display: none;
+  position: absolute;
+  right: 20px;
+  z-index: 999;
+  cursor: pointer;
+}
+.input-filter:nth-last-child(1){
+  border: 0;
+}
+.input-filter > *{
+  margin-right: 15px;
+}
+.input-filter input{
+  color: var(--inputColor);
+  font-weight: 300;
+  background: none;
+  border: 0;
+  outline: 0;
+}
+.input-filter input:focus{
+  font-weight: 500;
+}
+.input-filter p{
+  color: var(--textColor);
+  opacity: .8;
+}
+.checkbox{
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background-color: var(--backgroundCheck);
+  border-radius: 7px;
+  transition: .5s;
+  cursor: pointer;
+}
+.checkbox.checked{
+  background-color: #5964e0;
+}
+.checkbox:hover{
+  background-color: #5964e04d;
+}
+.checkbox.checked::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 5px;
+  left: 3px;
+  background-image: url("../assets/desktop/icon-check.svg");
+  background-size: 1.1rem;
+  background-repeat: no-repeat;
+}
+.checkbox.checked:hover{
+  background-color: #5964e0;
+}
+.jobs_UI{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px 20px;
+  margin-top: 90px; 
+  padding-bottom: 50px;
+}
+.job-Singal{
+  position: relative;
+  padding: 50px 25px 25px;
+  background-color: var(--backgroundItem);
+  border-radius: 7px;
+}
+.cmpny-logo{
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 55px;
+  height: 55px;
+  transform: translateY(-50%);
+  border-radius: 15px;
+}
+.job-Singal p,
+.hddsjb-left p,
+.desc-job p
+{
+  color: rgb(110, 128, 152);
+}
+.job-Singal p span,
+.hddsjb-left p span
+{
+  margin: 0 15px;
+}
+.job-Singal h3{
+  margin: 10px 0 30px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--textColor);
+  transition: .5s;
+}
+.job-Singal h3:hover{
+  color: rgb(89, 100, 224);
+}
+.job-Singal h5{
+  margin-top: 15px;
+  font-size: .9rem;
+  color: rgb(89, 100, 224);
+}
+.header-dt-jb{
+  position: relative;
+  justify-content: space-between;
+  margin: 50px auto 0;
+  padding-left: 0;
+  padding-right: 20px;
+  background-color: var(--backgroundItem);
+  border-radius: 7px;
+}
+.company-logo{
+  width: 150px;
+  height: 150px;
+  padding: 0 10px;
+}
+.company-logo img{
+  width: 100%;
+}
+.info-cmpny h3{
+  color: var(--textColor);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.info-cmpny a{
+  color: rgb(110, 128, 152);
+}
+.header-dt-jb button{
+  color: #5964e0;
+  padding: 15px 25px;
+  font-weight: 700;
+  background: rgba(89, 100, 224, 0.178);
+  border-radius: 5px;
+  transition: .5s;
+}
+.header-dt-jb button:hover{
+  background: rgba(89, 100, 224, 0.274);
+}
+.header-dt-jb button span{
+  display: block;
+}
+.desc-job{
+  margin: 20px auto;
+  padding: 50px 20px 25px;
+  background-color: var(--backgroundItem);
+  border-radius: 7px;
+}
+.hd-ds-jb{
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.hd-ds-jb a{
+  padding: 10px 50px;
+  color: #fff;
+  background-color: rgb(89, 100, 224);
+  border-radius: 7px;
+}
+.hddsjb-left h3,
+.desc-job h3{
+  color: var(--textColor);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 15px 0;
+}
+.hddsjb-left h5{
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgb(89, 100, 224);
+}
+.desc-job > h3{
+  margin: 30px 0 15px;
+}
+.desc-job p.desc-dt{
+  font-size: 1rem;
+  line-height: 1.7rem;
+}
+.desc-job ul,
+.desc-job ol{
+  padding-left: 18px;
+}
+.desc-job ul li,
+.desc-job ol li{
+  color: rgb(110, 128, 152);
+  margin: 15px 0;
+}
+@media (max-width: 992px){
+  .jobs_UI{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px){
+  header{
+    background-position-x: right;
+  }
+  .input-filter{
+    border: 0;
+  }
+  .If-right{
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    right: 0;
+    padding: 0;
+    background-color: var(--backgroundItem);
+    border-radius: 7px;
+    display: none;
+    z-index: 999;
+  }
+  .If-right.hide{
+    display: inline-block;
+  }
+  .If-right > div:nth-child(1){
+    border-bottom: 2px solid #0000001a;
+  }
+  .jobs_UI{
+    grid-template-columns: 1fr;
+  }
+  .iconFilter{
+    display: inline-block;
+  }
+  .Jobdetails > .row{
+    margin: 0;
+  }
+  .header-dt-jb{
+    display: block;
+    text-align: center;
+    padding: 40px 0 20px;
+  }
+  .company-logo{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+  }
+  .info-cmpny{
+    margin: 10px 0 30px;
+  }
+  .header-dt-jb button span{
+    display: inline-block;
+  }
+  .hd-ds-jb{
+    display: block;
+  }
+  .hd-ds-jb button{
+    margin-top: 20px;
+  }
+}
