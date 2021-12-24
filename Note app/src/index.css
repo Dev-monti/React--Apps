@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+:root {
+    --blueLight: #7b1fa2;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f3f4;
+}
+li{
+    list-style: none;
+}
+ul{
+    padding: 0;
+}
+button{
+    background: none;
+    border: 0;
+}
+h2,
+h3,
+h4,
+h5,
+ul
+{
+    margin: 0;
+}
+input,
+button,
+textarea{
+    outline: 0;
+}
+.section-left{
+    position: relative;
+    height: 100vh;
+    padding: 20px 0;
+    color: #fff;
+    background-color: var(--blueLight);
+}
+@media (max-width: 1199px){
+    .section-left{
+        width: 250px;
+        position: absolute;
+        z-index: 99;
+        transform: translateX(-100%);
+        transition: .5s;
+    }
+    .section-left.hidden{
+        transform: translateX(0);
+        transition: .5s;
+    }
+}
+.section-left .bi-x-lg{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+.section-left ul{
+    margin-top: 30px;
+}
+.section-left ul li{
+    padding: 12px 30px;
+    cursor: pointer;
+}
+.section-left ul li:hover,
+.types .note-type:hover,
+.types button:hover
+{
+    background: rgba(0, 0, 0, 0.212);
+}
+.section-left ul li button{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.856);
+}
+.section-left ul li i{
+    font-size: 14px;
+    margin-right: 10px;
+}
+/* ******************** */
+.line{
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.158);
+    margin: 20px 30px;
+}
+.types .note-type{
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: .5s;
+}
+.types .note-type:hover{
+    padding-left: 50px;
+    transition: .5s;
+}
+.types div span{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.types div h4{
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.856);
+    font-size: 14px;
+    font-weight: 300;
+}
+div.new-type{
+    position: relative;
+    padding: 10px 5px 10px 30px;
+}
+div.new-type:hover{
+    background: transparent;
+}
+.new-type input{
+    font-size: 12px;
+    color: #fff;
+    width: 100px;
+    padding: 5px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 3px;
+}
+.btn-color{
+    width: 70px;
+    height: 30px;
+    margin: 0 10px;
+    background-image: linear-gradient(to bottom right,rgb(0, 195, 255),rgb(255, 238, 0),rgb(255, 72, 0));
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+button.btn-color:hover{
+    background-image: linear-gradient(to right,rgb(0, 195, 255),rgb(255, 238, 0),rgb(255, 72, 0));
+}
+.new-type .btn-add{
+    color: #fff;
+}
+div.picker{
+    position: absolute;
+    top: -70px;
+    left: 100%;
+    z-index: 999;
+}
+.btn-addtype{
+    width: 100%;
+    text-align: start;
+    font-size: 14px;
+    padding: 13px 30px;
+    color: rgba(255, 255, 255, 0.699);
+}
+.btn-addtype span{
+    margin-right: 10px;
+}
+/* ******************** */
+.content-body{
+    padding: 0;
+}
+.btn-barleft{
+    margin-right: 20px;
+    background-color: var(--blueLight);
+    padding: 0 10px;
+    border-radius: 5px;
+}
+.btn-barleft i{
+    font-size: 25px !important;
+    color: #fff !important;
+}
+.search-input{
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.082);
+}
+.search-input i{
+    font-size: 20px;
+    color: rgba(53, 53, 53, 0.637);
+}
+.search-input input{
+    margin-left: 20px;
+    font-size: 14px;
+    color: rgb(53, 53, 53);
+    border: 0;
+    outline: 0;
+}
+/* ************************ */
+.Headnotes{
+    margin: 25px 0 15px;
+    padding: 0 25px;
+}
+.priority button{
+    padding: 7px 20px;
+    margin-right: 20px;
+    color: rgba(0, 0, 0, 0.842);
+    text-transform: capitalize;
+    transition: .5s;
+}
+.priority .active,
+.priority button:hover{
+    color: #fff;
+    background-color: var(--blueLight);
+    border-radius: 3px;
+    transition: .5s;
+}
+.Headnotes span{
+    color: var(--blueLight);
+    cursor: pointer;
+}
+.Headnotes span i{
+    margin-right: 15px;
+}
+/* **************************** */
+.container.notes{
+    position: relative;
+    padding: 0 25px;
+}
+.note{
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    height: 200px;
+}
+.body-note{
+    padding: 10px;
+}
+.note span{
+    font-size: 14px;
+}
+.note:hover .title-note h3{
+    color: var(--blueLight);
+    transition: .5s;
+}
+.note .title-note{
+    margin: 10px 0;
+}
+.note .title-note span{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 3px 15px 0 0;
+}
+.note .title-note h3{
+    font-size: 20px;
+    cursor: pointer;
+}
+.note p{
+    font-size: 15px;
+}
+/* ADD NOTES */
+.container-addnote{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+.new-note{
+    position: absolute;
+    padding: 5px 25px 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    border-radius: 10px;
+}
+.new-note input,
+.new-note textarea{
+    display: block;
+    width: 350px;
+    font-size: 14px;
+    padding: 10px 15px;
+    margin: 20px 0 5px; 
+    border: 1px solid rgba(58, 58, 58, 0.342);
+    border-radius: 5px;
+}
+.new-note input:focus,
+.new-note textarea:focus,
+.btns-lists div button:focus,
+.btns-lists div button:hover
+{
+    border: 1px solid var(--blueLight) !important;
+}
+.new-note span{
+    font-size: 14px;
+    color: red;
+}
+.btns-lists{
+    margin: 20px 0 30px;
+}
+.btns-lists div{
+    position: relative;
+}
+.btns-lists div.empty button{
+    color: red;
+    border: 1px solid red;
+}
+.btns-lists div.empty button i{
+    color: red;
+}
+.btns-lists div button{
+    padding: 7px 15px;
+    text-transform: capitalize;
+    color: rgba(58, 58, 58, 0.849);
+    border: 1px solid rgba(58, 58, 58, 0.342);
+    border-radius: 5px;
+}
+.btns-lists div button:hover i,
+.btns-lists div button:hover,
+.btns-lists div button:focus i,
+.btns-lists div button:focus
+{
+    color: var(--blueLight);
+}
+.btns-lists div button i{
+    margin-left: 30px;
+    color: rgba(58, 58, 58, 0.747);
+}
+.btns-lists div ul{
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-bottom: 10px;
+    z-index: 999;
+    background-color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.233);
+    border-radius: 0 0 10px 10px;
+    transition: 1s ;
+}
+.btns-lists div ul li{
+    padding: 7px 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.btns-lists div ul li:hover{
+    background-color: rgba(68, 68, 68, 0.123);
+}
+.btns-footer-form {
+    padding: 0 50px;
+    z-index: 1;
+}
+.btns-footer-form  button{
+    padding: 7px 15px;
+    color: rgb(0, 110, 255);
+    border-radius: 5px;
+}
+.btns-footer-form  button:hover{
+    background-color: rgba(0, 140, 255, 0.103);
+}
