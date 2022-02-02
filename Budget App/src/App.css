@@ -1,0 +1,22 @@
+body{
+    min-height: 100vh;
+}
+.form-body{
+    transform: translate(-50%,0%);
+    position: absolute;
+    top: 50px;
+    left: 50%;
+}
+.overLay-btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000052;
+    border: 0;
+    outline: 0;
+}
+.overLay-btn:not(:disabled){
+    cursor: auto;
+}
