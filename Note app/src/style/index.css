@@ -30,9 +30,12 @@ button,
 textarea{
     outline: 0;
 }
+.container-fluid{
+    position: relative;
+}
 .section-left{
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px 0;
     color: #fff;
     background-color: var(--blueLight);
@@ -58,11 +61,7 @@ textarea{
 .section-left ul{
     margin-top: 30px;
 }
-.section-left ul li{
-    padding: 12px 30px;
-    cursor: pointer;
-}
-.section-left ul li:hover,
+.section-left ul li button:hover,
 .types .note-type:hover,
 .types button:hover
 {
@@ -71,6 +70,9 @@ textarea{
 .section-left ul li button{
     font-size: 13px;
     color: rgba(255, 255, 255, 0.856);
+    padding: 12px 30px; 
+    width: 100%;
+    text-align: left;
 }
 .section-left ul li i{
     font-size: 14px;
@@ -87,7 +89,8 @@ textarea{
     cursor: pointer;
     transition: .5s;
 }
-.types .note-type:hover{
+.types .note-type:hover,
+.types .note-type.focus{
     padding-left: 50px;
     transition: .5s;
 }
@@ -151,9 +154,6 @@ div.picker{
     margin-right: 10px;
 }
 /* ******************** */
-.content-body{
-    padding: 0;
-}
 .btn-barleft{
     margin-right: 20px;
     background-color: var(--blueLight);
@@ -185,28 +185,31 @@ div.picker{
     margin: 25px 0 15px;
     padding: 0 25px;
 }
-.priority button{
+.levels button{
     padding: 7px 20px;
     margin-right: 20px;
     color: rgba(0, 0, 0, 0.842);
     text-transform: capitalize;
     transition: .5s;
 }
-.priority .active,
-.priority button:hover{
+.levels .active,
+.levels button:hover{
     color: #fff;
     background-color: var(--blueLight);
     border-radius: 3px;
     transition: .5s;
 }
-.Headnotes span{
+.Headnotes .btn-new-note{
     color: var(--blueLight);
     cursor: pointer;
 }
-.Headnotes span i{
+.Headnotes .btn-new-note i{
     margin-right: 15px;
 }
 /* **************************** */
+.body-app{
+    position: relative;
+}
 .container.notes{
     position: relative;
     padding: 0 25px;
@@ -219,6 +222,42 @@ div.picker{
 }
 .body-note{
     padding: 10px;
+}
+.body-note.none{
+    display: none;
+}
+.head_note{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.head_note i{
+    cursor: pointer;
+}
+.head_note ul{
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 #00000021;
+    border-radius: 7px;
+    display: none;
+}
+.head_note ul li{
+    width: 150px;
+}
+.head_note ul li:hover{
+    background-color: #f3f3f4;
+}
+.head_note ul li button{
+    text-align: left;
+    width: 100%;
+    font-size: .9rem;
+    padding: 10px 0 10px 20px;
+}
+.head_note.setting_open ul{
+    display: inline-block;
 }
 .note span{
     font-size: 14px;
@@ -243,6 +282,18 @@ div.picker{
 .note p{
     font-size: 15px;
 }
+.spinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: .8;
+}
+.spinner-border{
+    width: 3rem;
+    height: 3rem;
+    animation: 1s linear infinite spinner-border;
+}
 /* ADD NOTES */
 .container-addnote{
     position: absolute;
@@ -253,7 +304,7 @@ div.picker{
     background-color: rgba(0, 0, 0, 0.61);
 }
 .new-note{
-    position: absolute;
+    position: fixed;
     padding: 5px 25px 15px;
     top: 50%;
     left: 50%;
