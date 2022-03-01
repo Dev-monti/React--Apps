@@ -1,4 +1,4 @@
-## Goby Sample Server APP - To Do List
+## Budget App 
 
 ### Technologies
 
